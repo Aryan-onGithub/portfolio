@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb { 
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: var(--primecolor);
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+body{
+    height: 400vh;
+}
+
+
+        * {
+            margin: 0;
+            background-color: var(--background);
+            color: var(--fontcolor);
+            caret-color: transparent;
+            font-family: "Roboto", sans-serif;
+        }
+
+        :root {
+            --background: rgb(22 21 21);
+            --primecolor: #eaad05e6;
+            --fontcolor: white;
+        }
+
+        /* common classes */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hcenter {
+            display: flex;
+            justify-content: center;
+        }
+
+        .columcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        .left {
+            display: flex;
+            justify-content: end;
+        }
+
+        /* nav bar */
+
+        .navbox {
+            font-size: 3vmax;
+        }
+
+        .menu {
+            gap: 5vmax;
+        }
+
+        .nav {
+            justify-content: space-between;
+            padding: 1.5vmax 12vmax;
+            border-bottom: 1px solid #8080800f;
+        }
+
+        .name {
+            color: var(--primecolor);
+            font-weight: 800;
+        }
+
+        button {
+            border: none;
+            height: 3vmax;
+            width: 5vmax;
+            border-radius: 4px;
+            font-size: .35em;
+        }
+
+        .navbox .home {
+            background-color: var(--primecolor);
+        }
+
+        .navbox .two {
+            border-bottom: 2px solid var(--primecolor);
+            width: 7vmax;
+        }
+
+        i {
+            display: none;
+            font-size: 4vmax;
+            transition: color .5s, transform .5s;
+        }
+
+
+        i:hover {
+            color: #CA1B42;
+            transform: rotate(180deg);
+        }
+
+        .sidebar {
+            /* height: 60vh; */
+            padding: 20vw 15vw;
+            border-radius: 8px;
+            display: flex;
+            background-color: #80808047;
+            backdrop-filter: blur(10px);
+            flex-direction: column;
+            gap: 5vw;
+            align-items: center;
+
+            display: none;
+        }
+
+        .sidebar button {
+            height: 5vmax;
+            width: 9vmax;
+            font-size: 1.7vmax;
+        }
+
+        .sidebar .two {
+            width: 9vmax;
+        }
+
+        .sidebar.open {
+            display: flex;
+        }
+
+        /* 1 homepage */
+
+        .font {
+            font-size: 1.5vw;
+            font-size: clamp(0.7em, 1.5vw, 1.4em);
+        }
+
+        .page1 img {
+            width: clamp(161px, 35vw, 347px);
+            border-radius: 179px;
+            background-color: var(--primecolor);
+        }
+
+        .page1 {
+            padding: 0 4vw;
+            /*  */
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            gap: 0 6vw;
+            margin: 5vw 0;
+        }
+
+        .page1 .div {
+            background-color: #CA1B42;
+        }
+
+        .page1 h1,
+        h4 {
+            font-weight: 400;
+        }
+
+        .page1 span {
+            font-weight: 800;
+        }
+
+        .page1 button {
+            border: none;
+            height: 4vmax;
+            width: 9vmax;
+            border-radius: 5px;
+            font-size: 0.7em;
+            font-weight: 500;
+            background-color: var(--primecolor);
+        }
+
+        .page1 p {
+            max-width: 48vw;
+            padding: 3vw 0;
+        }
+
+        button.white {
+            color: black;
+            background-color: white;
+        }
+
+        /* 2 tech stack */
+
+        /* 3 projects */
+
+        /* 4 contact */
+
+        /* responsive */
+        @media (max-width: 800px) {
+
+            /* nav bar  */
+            .nav {
+                padding: 1.5vmax 5vmax;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            i {
+                display: block;
+            }
+
+            .page1 p {
+                min-width: 90vw;
+            }
+        }
